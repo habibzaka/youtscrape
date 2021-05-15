@@ -35,7 +35,10 @@ const insta = {
 
         await insta.page.waitFor(1000);
 
+        console.log(process.env.IG_USERNAME);
+
         await insta.page.type('input[name="username"]', process.env.IG_USERNAME, { delay: 50 });
+
         await insta.page.type('input[name="password"]', process.env.IG_PASSWORD, { delay: 50 });
 
         const loginSelector = '#loginForm > div > div:nth-child(3) > button > div';
@@ -86,7 +89,7 @@ const insta = {
 
         }
 
-        // console.log(scrapedData);
+        console.log(scrapedData);
 
         // const response = await fetch('https://scontent-cdg2-1.cdninstagram.com/v/t50.2886-16/10000000_903178453851352_354375975715698124_n.mp4?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_cat=104&_nc_ohc=Rcb4cD-TlqEAX9PPbxQ&edm=AABBvjUBAAAA&ccb=7-4&oe=60A21BBF&oh=6a76e397aee487cb3ff7953ccb8e9dbd&_nc_sid=83d603');
         // const buffer = await response.buffer();
